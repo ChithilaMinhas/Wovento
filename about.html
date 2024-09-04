@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wovento - About Us</title>
+    <link rel="icon" href="images/WhatsApp Image 2024-09-03 at 20.13.43.jpeg" type="image/x-icon">
+    <style>
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(180deg, #35002e, #000000);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+.about {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.about h1 {
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about ul li {
+    margin: 10px 0;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url(images/space-abstract-colorful-earth-wallpaper-preview.jpg); /* Replace with your image */
+    background-size: cover;
+}
+.hero h4{
+    color: rgb(229, 255, 0);
+    padding: 5px;
+    border: 2px solid mediumturquoise;
+    background-color: #0a0a1a;
+    border-radius: 10px;
+    width: 200px;
+    margin-left: 515px;
+}
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 5px;animation: slideIn 1s;
+}
+.card-vip{
+    background: rgba(0, 238, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 5px;
+    transition: all 1s;
+    transform: scale(1.1);
+    animation: slideIn2 1s;
+}
+.image{
+    width: 250px;
+    height: 500px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes slideIn2 {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/* Header Logo Animation */
+.logo {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navigation Links Animation */
+.nav-links li {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.2s; /* Delay for each link */
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.2s; }
+.nav-links li:nth-child(2) { animation-delay: 0.3s; }
+.nav-links li:nth-child(3) { animation-delay: 0.4s; }
+.nav-links li:nth-child(4) { animation-delay: 0.5s; }
+.nav-links li:nth-child(5) { animation-delay: 0.6s; }
+
+/* Blog Post Animation */
+.blog-post {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Delay for blog posts */
+}
+
+.blog-post:nth-of-type(1) { animation-delay: 0.5s; }
+.blog-post:nth-of-type(2) { animation-delay: 0.6s; }
+.blog-post:nth-of-type(3) { animation-delay: 0.7s; }
+.blog-post:nth-of-type(4) { animation-delay: 0.8s; }
+
+/* Button Hover Effect */
+.nav-links a:hover {
+    color: #0056b3;
+    transition: color 0.3s ease;
+    transform: scale(1.05);
+}
+.chithila{
+    width: 150px;
+    height: 300px;
+}
+.card, .card-vip {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card-vip:hover{
+    transform: scale(1.15);
+}
+.info {
+    display: none; /* Hide by default */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.842);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card:hover .info, .card-vip:hover .info {
+    display: block; /* Show on hover */
+}
+
+.card img, .card-vip img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h1, .card-vip h1, .card h4, .card-vip h4 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.sineth{
+    width: 250px;
+    height: 500px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Wovento</div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="cards">
+        <div class="card">
+            <img src="images/me.jpg" alt="Image of Chithila Minhas" class="chithila">
+            <h1>Chithila Minhas</h1>
+            <h4>Web Developer</h4>
+            <div class="info">
+                <p>
+                    Hi, My name is D.Chithila Minhas Dissanayake. <br>
+                    I'm 14 years old. <br>My country is Sri lanka. <br>I live in Colombo. <br>
+                    I study in Siri piyarathana Central Collage Padukka. <br>
+                    I'm the one who designed this website. <br>
+                    My ambition is to become a web developer one day. <br>
+                </p>
+            </div>
+        </div>
+        <div class="card-vip">
+            <img src="images/WhatsApp Image 2024-09-04 at 13.40.45.jpeg" alt="Image of Ameesha Sineth" class="sineth">
+            <h1>Ameesha Sineth</h1>
+            <h4>Owner</h4>
+            <div class="info">
+                <p>Details about Ameesha Sineth</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="" alt="Image of Geeshan" class="geeshan">
+            <h1>Geeshan Sewmina</h1>
+            <h4>2nd Owner</h4>
+            <div class="info">
+                <p>Details about Geeshan Sewmina</p>
+            </div>
+        </div>
+    </section>
+    
+    </section>
+    <script>
+        
+    </script>
+</body>
+</html>

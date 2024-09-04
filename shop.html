@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wovento - Shop</title>
+    <link rel="icon" href="images/WhatsApp Image 2024-09-03 at 20.13.43.jpeg" type="image/x-icon">
+    <style>
+.topic-list {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topic-card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px; /* Set a fixed width for cards */
+    transition: transform 0.3s;
+    animation: fadeIn 1.5s;
+}
+
+.topic-card:hover {
+    transform: scale(1.05);
+}
+
+.topic-card h2 {
+    font-size: 1.5em;
+}
+
+.topic-card p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background: #f39c12;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e67e22;
+}
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(180deg, #310e31, #1e1c3a);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Header Logo Animation */
+.logo {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navigation Links Animation */
+.nav-links li {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.2s; /* Delay for each link */
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.2s; }
+.nav-links li:nth-child(2) { animation-delay: 0.3s; }
+.nav-links li:nth-child(3) { animation-delay: 0.4s; }
+.nav-links li:nth-child(4) { animation-delay: 0.5s; }
+.nav-links li:nth-child(5) { animation-delay: 0.6s; }
+
+/* Blog Post Animation */
+.blog-post {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Delay for blog posts */
+}
+
+.blog-post:nth-of-type(1) { animation-delay: 0.5s; }
+.blog-post:nth-of-type(2) { animation-delay: 0.6s; }
+.blog-post:nth-of-type(3) { animation-delay: 0.7s; }
+.blog-post:nth-of-type(4) { animation-delay: 0.8s; }
+
+/* Button Hover Effect */
+.nav-links a:hover {
+    color: #0056b3;
+    transition: color 0.3s ease;
+    transform: scale(1.05);
+}
+.topic-card img{
+width: 200px;
+height: 200px;
+}
+footer{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.356);
+    text-align: center;
+}
+.search-container {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px;
+            font-size: 17px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+            transition: all 0.3s;
+        }
+        .search-container button {
+            position: absolute;
+            right: 0;
+            padding: 10px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .search-container button:hover {
+            background: #e67e22;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Wovento</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for items...">
+                <button onclick="searchItems()">Search</button>
+            </div>
+        </nav>
+    </header>
+    <section class="topic-list" id="topicList">
+        <h1>Shop</h1>
+        <div class="topic-list">
+            <div class="topic-card">
+                <img src="images/sample_0 (48).jpg" alt="">
+                <h2>Foods</h2>
+                <p>buy delecious foods.</p>
+                <a href="foods.html"><button>Go to catagory</button></a>
+            </div>
+            <div class="topic-card">
+                <img src="images/sample_0.jpg" alt="">
+                <h2>Tools</h2>
+                <p>Tools like grage items, kitchen items and meny more.</p>
+                <a href="tools.html"><button>Go to catagory</button></a>
+            </div>
+            <div class="topic-card">
+                <img src="images/sample_0 (1).jpg" alt="">
+                <h2>Circuits</h2>
+                <p>Circuits like Arduino, Micro-bit and basic circuits.</p>
+                <a href="circuits.html"><button>Go to catagory</button></a>
+            </div>
+            <div class="topic-card">
+                <img src="images/sample_0 (2).jpg" alt="">
+                <h2>Toys</h2>
+                <p>All kinds of toys are sold here.</p>
+                <a href="toys.html"><button>Go to catagory</button></a>
+            </div>
+            <div class="topic-card">
+                <img src="images/sample_0 (3).jpg" alt="">
+                <h2>Digital Devices</h2>
+                <p>Digital devices like Phones, Laptops, Computers, Tabs and meny more.</p>
+                <a href="digitaldevices.html"><button>Go to catagory</button></a>
+            </div>
+            <div class="topic-card">
+                <img src="images/DALL·E 2024-09-04 09.58.22 - A purple t-shirt displayed on a white background. The t-shirt features the word 'Wowento' prominently printed on the front in a stylish, modern font.webp" alt="">
+                <h2>Cloths</h2>
+                <p>You can buy any kind of a cloth at your disired size.</p>
+                <a href="cloths.html"><button>Go to catagory</button></a>
+            </div>
+            <div class="topic-card">
+                <img src="images/sample_0 (4).jpg" alt="">
+                <h2>Drinks</h2>
+                <p>Buy delicious drinks</p>
+                <a href="drinks.html"><button>Go to catagory</button></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Wovento. All rights reserved</p>
+    </footer>
+    <script>
+        function searchItems() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('topic-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let card = cards[i];
+                let title = card.getElementsByTagName('h2')[0].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

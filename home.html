@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wovento</title>
+    <link rel="icon" href="images/WhatsApp Image 2024-09-03 at 20.13.43.jpeg" type="image/x-icon">
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: linear-gradient(180deg, #3b003d, #000000);
+}
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+.hero {
+    text-align: left;
+    padding: 50px 20px;
+    background-image: url();
+    background-size: cover;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-left: 20px;
+    font-family: serif;
+}
+
+.hero h3 {
+    font-size: 1.5em;
+    margin-left: 20px;
+    width: 350px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero p {
+    padding: 10px;
+    width: 550px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: initial;
+}
+
+button {
+    padding: 10px 20px;
+    background: #f39c12;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #e67e22;
+    transform: scale(1.2);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #0a0a1a;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    animation: fadeIn 1.5s;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.3s;
+}
+.card:hover{
+    color: aquamarine;
+    transform: scale(1.1);
+}
+/* General Animation Settings */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Header Logo Animation */
+.logo {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navigation Links Animation */
+.nav-links li {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.2s; /* Delay for each link */
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.2s; }
+.nav-links li:nth-child(2) { animation-delay: 0.3s; }
+.nav-links li:nth-child(3) { animation-delay: 0.4s; }
+.nav-links li:nth-child(4) { animation-delay: 0.5s; }
+.nav-links li:nth-child(5) { animation-delay: 0.6s; }
+
+/* Blog Post Animation */
+.blog-post {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Delay for blog posts */
+}
+
+.blog-post:nth-of-type(1) { animation-delay: 0.5s; }
+.blog-post:nth-of-type(2) { animation-delay: 0.6s; }
+.blog-post:nth-of-type(3) { animation-delay: 0.7s; }
+.blog-post:nth-of-type(4) { animation-delay: 0.8s; }
+
+/* Button Hover Effect */
+.nav-links a:hover {
+    color: #0056b3;
+    transition: color 0.3s ease;
+    transform: scale(1.05);
+}
+.wowentologo{
+    width: 200px;
+    height: 200px;
+}
+footer{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.356);
+    text-align: center;
+}
+.hero {
+    position: relative; /* Make the hero section a positioning context */
+}
+
+.hero-logo {
+    position: absolute;
+    top: 90px; 
+    right: 200px; 
+    width: 250px; 
+    height: 250px; 
+    border-radius: 20px; 
+    animation: fadeIn 1s;
+}
+.name{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Wovento</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1><span class="name">Wovento</span>: The <br>World at your fingertips</h1>
+            <p>This is just the beginning of our business.<br>We hope to expand our reach and serve customers across multiple regions.</p>
+            <a href="shop.html"><button>Start shipping</button></a>
+            <img src="images/file.enc" alt="Wovento Logo" class="hero-logo">
+        </section>
+        <section class="cards">
+            <div class="card">
+                <h2>Service 1</h2>
+                <p>idk what to put here</p>
+            </div>
+            <div class="card">
+                <h2>Service 2</h2>
+                <p>idk what to put here</p>
+            </div>
+            <div class="card">
+                <h2>Service 3</h2>
+                <p>idk what to put here</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Wovento. All rights reserved</p>
+    </footer>
+</body>
+</html>
